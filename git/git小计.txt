@@ -1,0 +1,160 @@
+git
+	安装git程序后在本地任一位置，右键：选择中git bash打开
+	配置用户信息
+		git config --global user.name "Your Name"
+ 		git config --global user.email "email@example.com"
+ 	查看配置信息
+ 		git config --list
+ 		ssh-keygen -t rsa -C "youremail@example.com"
+ 			在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH
+ 			Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人
+		cd 目录名： 进入目录 
+		（cd .. 返回上一级，注意cd后要有空格）
+
+		2、mkdir : 创建目录
+
+		3、pwd:  显示当前所在路径
+
+		4、rm *.txt: 删除文件
+
+		5、cat 1.txt  : 查看文本文件的内容
+
+		6、 列举目录  ：  ls
+
+		7、清屏： clear
+
+		8、结束当前命令： Ctrl + C
+
+		9、 rm -rf 目录名
+注册GitHub
+	
+	个人中心中-->【SSH and GPG keys】--单击【Add SSH Key】
+	[在Key文本框里粘贴id_rsa.pub文件的内容]
+	[登陆GitHub]--->在右上角找到单击[Create a new repo]创建一个新的仓库test
+	在本地运行仓库下运行命令
+		git clone git@github.com:eblen007/gitskills.git(项目地址)
+	>cd 项目dist/
+	>git add .
+	>git commit -m "123"
+	>git push
+
+	或者
+		ssh-keygen -t rsa -C "youremail@example.com"
+			{用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，
+			SSHKey的秘钥对，id_rsa是私钥，不能泄露出去，
+			id_rsa.pub是公钥，可以放心地告诉任何人}
+		登陆GitHub--[个人中心]--[SSH and GPG keys]--[Add SSH Key]填上任意[Title]--在Key文本框里粘贴id_rsa.pub文件的内容
+		登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库test
+		命令行[git remote add origin git@github.com:eblen007/test.git(仓库地址)]
+			{origin远程库的默认名字
+				特殊的
+					遇到fatal: remote origin already exists.
+					解决办法如下：
+					    1、先输入$ git remote rm origin
+					    2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！
+					    3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section 'remote.origin'. 我们需要修改gitconfig文件的内容
+					    4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc
+					    5、找到一个名为gitconfig的文件，打开它把里面的[remote "origin"]那一行删掉就好了！
+			}
+		git push -u origin master
+			{
+				第一次推送master分支时，加上了-u参数
+				如果 git push不成功，可先git pull  或git pull origin master --allow-unrelated-histories  （如果进入编辑状态，则输入”:wq”退出）
+			}
+		特殊的
+			{
+				git push -u origin master 出现以下的报错
+				$ git push -u origin master
+				To github.com:wfteacher/yts0226.git
+			 	! [rejected]        master -> master (non-fast-forward)
+				error: failed to push some refs to 'git@github.com:wfteacher/yts0226.git'
+				hint: Updates were rejected because the tip of your current branch is behind
+				hint: its remote counterpart. Integrate the remote changes (e.g.
+				hint: 'git pull ...') before pushing again.
+				hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+				
+				解决方案： git push --force origin master   即可推送成功
+			}
+		git pull 某个分支的更新[git pull origin master]
+
+		【注】:提交出错
+			1、当两人同时修改了同一个文件内容，当一个人提交了另一个人需要与另一个人咨询后把文件内容合并/保留操作，重新提交--[暂存区]-[版本库]-[远程仓库]
+	git ini 创建版本库
+	git add .  添加到暂存区
+		{git add readme.txt
+		git add .   : 添加所有文件}
+	git commit -m "wrote a readme file" 提交到仓库
+	git log  历史记录
+	touch .gitignore 即可创建该文件
+		不希望添加到git
+			{
+				*.a 忽略所有的.a结尾的文件
+				！lib.a 但lib.a除外
+				/TODO  仅仅忽略项目目录下的TODO文件但不包括subdir/TODO
+				build/  忽略build/目录下的所有文件
+				doc/*.txt 会忽略doc/notes.txt但不包括doc/server/arch.txt
+			}
+	git status  查看当前版本库状态
+	git diff 1.txt 查看当前的修改
+	git log --pretty=oneline  版本记录表格化
+	git reset  --hard HEAD^  回退到上一个版本[HEAD~100]回退多个版本
+	git reset --hard 上一个的ID号  回退到特定版本
+	git reflog 记录每一次命令的ID号
+	git diff 1.txt   是查看工作区和暂存区的区别
+	git diff HEAD -- 1.txt   查看工作区和版本库里面最新版本的区别
+	撤销修改
+	git checkout -- test.txt  把test.txt文件在工作区的修改全部撤销
+		test.txt自修改后还没有被放到暂存区，现在撤销修改会撤销和版本库一个版本；
+		test.txt已经添加到暂存区后，又作修改，现在撤销修改就回到和添加到暂存区的版本。
+	删除文件
+	git rm 文件名删掉 并git commit  确实删除该文件
+	git checkout -- test.txt    删错了，恢复到最新版本
+	git checkout 版本号  1.txt   把指定文件回退到某个版本
+	git 提交一个空的目录 [进入空文件夹目录--touch .gitkeep] 即可提交
+
+	分支管理
+		在根目录中创建基本的目录结构
+		>echo "# dbsite" >> README.md
+		>git init
+		>git add README.md
+		>git commit -m "first commit"
+		>git remote add origin git@github.com:ma1833577561/dbsite.git
+		>git push -u origin master
+		
+		>git branch //查看分支
+		>git branch name  //创建分支
+		>git checkout name  //切换分支
+			>git checkout -b name  //创建分支并且换
+			>git log  //显示分支版本
+		>git merge name //合并分支
+		分支冲突解决
+			分支1与分支2同时修改了同一文件提交到版本库中与master出现冲突
+
+			解决办法: 冲突文件修改在add-->commit-->push即可
+		删除分支
+			>git branch -d name
+		恢复分支
+			>git reflog  //查询记录
+			>git branch name HEAD@{4}
+		推送分支
+			(master)>git push origin name  //推送分支
+		分支拉取
+			目录，假设是git_work
+				>cd git_work
+				>git clone http://myrepo.xxx.com/project/.git 	
+					//这样在git_work目录下得到一个project子目录
+				>cd project
+				>git branch -a，列出所有分支名称如下：
+				>remotes/origin/dev
+				>remotes/origin/release
+				>git checkout -b dev origin/dev
+					//作用是checkout远程的dev分支，
+					//在本地起名为dev分支，
+					//并切换到本地的dev分支
+				>git checkout -b release origin/release //作用参见上一步解释
+				>git checkout dev //切换回dev分支，并开始开发。
+
+				
+		
+
+
