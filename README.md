@@ -3,7 +3,7 @@
 ### 5个免费GitHub最强前端学习资源 程序员不花一分钱也能变很强
 ***
 
-git仓库
+`git仓库`
 
 * 1.[javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)(基于javascript的算法和数据结构)
    
@@ -16,7 +16,7 @@ git仓库
 * 5.[30-seconds-of-code](https://github.com/30-seconds/30-seconds-of-code)(开发时常用的简短代码)
 
 
-vscode阅读模式
+`vscode阅读模式`
 
 * 1.[javascript-algorithms_进入vscode](https://github1s.com/trekhleb/javascript-algorithms)(基于javascript的算法和数据结构)
 
@@ -36,14 +36,15 @@ vscode阅读模式
 
 ***
 
-git仓库
+`git仓库`
 * 1.[vue-lazyload](https://github.com/hilongjw/vue-lazyload)(基于vue的图片懒加载)
 
 
 
 
+`vscode阅读模式`
 
-
+* 1.[vue-lazyload](https://github1s.com/hilongjw/vue-lazyload)(基于vue的图片懒加载)
 
 
 
