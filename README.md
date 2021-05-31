@@ -32,6 +32,13 @@ vscode阅读模式
 // 注：github后面加1s进入类似vscode的样式可以更好的阅读代码
 
 
+### vue相关资料
+
+***
+
+git仓库
+* 1.[vue-lazyload](https://github.com/hilongjw/vue-lazyload)(基于vue的图片懒加载)
+
 
 
 
