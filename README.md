@@ -48,12 +48,43 @@
 
 
 
+### 小程序相关资料
+
+***
+`git仓库`
+* 1.[vant Weapp](https://github.com/youzan/vant-weapp)(轻量、可靠的小程序 UI 组件库)
 
 
 
 
+`vscode阅读模式`
+
+* 1.[vant Weapp](https://github1s.com/youzan/vant-weapp)(轻量、可靠的小程序 UI 组件库)
+
+### 其他相关资料
+
+***
+`git仓库`
+* 1.[GGEditor](https://github.com/alibaba/GGEditor)(GG-Editor 是基于G6-Editor 进行二次封装的一款可视化操作应用框架)[使用文档](https://www.yuque.com/dezhu/gy57ob/ougpkg)(思维导图文档)
+
+* 2.[Intro.js](https://github.com/usablica/intro.js)(网站的提供用户指引)[使用文档](https://www.dowebok.com/35.html)
+
+* 3.[freeCodeCamp ](https://learn.freecodecamp.one/)(独立完成 5 个终极项目，可以获得一个免费证书。是的，关卡、项目、证书、服务器 这些都是 100% 免费的。)
+   
+* 4.[w3cways](https://www.w3cways.com/)(Web前端学习之路)
 
 
+`vscode阅读模式`
+
+* 1.[GGEditor](https://github1s.com/alibaba/GGEditor)(GG-Editor 是基于G6-Editor 进行二次封装的一款可视化操作应用框架)
+
+### 知识笔记平台
+
+***
+`git仓库`
+* 1.[语雀](https://www.yuque.com/)(新一代云端知识库个人笔记与知识创作，团队协同与知识沉淀)
+
+***
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
