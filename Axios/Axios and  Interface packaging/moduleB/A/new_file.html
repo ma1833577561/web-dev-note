@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			setTimeout(function() {
+			console.log('setTimeout');
+			})
+			new Promise(function(resolve) {
+			console.log('promise');
+			for (let i = 0; i < 10000; i++){
+			if(i === 10) {
+			console.log('for');
+			}
+			 i == 9999 && resolve('resolve');
+			 }
+			 }).then(function(val) {
+			 console.log(val);
+			 })
+			  console.log('console');
+		</script>
+	</body>
+</html>
