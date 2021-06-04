@@ -1,0 +1,26 @@
+
+1、安装 python 
+菜鸟教程
+https://www.runoob.com/python/python-install.html
+打开 WEB 浏览器访问https://www.python.org/downloads/windows/
+
+
+2、cmd命令下安装pip
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+python get-pip.py
+
+找到自己python安装目录下的pip
+
+3、requests 
+打开cmd窗口
+在cmd里将目录切换到你的pip所在路径。比如我的在C:\Python34\Scripts这个目录下，先切换到d盘，再进入这个路径。输入：cd  C:\Python34\Scripts  
+
+输入命令pip install requests 执行安装
+
+
+4、Python cmd pip报错，pip安装requests超时
+
+中国科技大学的镜像地址
+python -m pip install --upgrade pip -i https://mirrors.ustc.edu.cn/pypi/web/simple/
