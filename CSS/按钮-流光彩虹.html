@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    .btn {
+    .lgch-btn {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,7 +24,7 @@
     border-radius: 60px;
   }
 
-  .btn:hover {
+  .lgch-btn:hover {
     animation: animate 8s linear infinite;
   }
 
@@ -38,7 +38,7 @@
     }
   }
 
-  .btn::before {
+  .lgch-btn::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -53,7 +53,7 @@
     transition: 0.5s;
   }
 
-  .btn:hover::before {
+  .lgch-btn:hover::before {
     filter: blur(20px);
     opacity: 1;
     animation: animate 8s linear infinite;
@@ -62,6 +62,6 @@
     </style>
 </head>
 <body>
-    <b href="#" class="btn">button</b>
+    <a href="#" class="lgch-btn">button</a>
   </body>
 </html>
