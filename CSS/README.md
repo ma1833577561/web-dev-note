@@ -33,4 +33,4 @@
     /*第一个空心三角形 end*/
 ```
 
-![image](https://github.com/ma1833577561/web-development-notebook/tree/master/CSS/images/1.png)
+![1.png](https://github.com/ma1833577561/web-development-notebook/blob/master/CSS/images/1.png)
