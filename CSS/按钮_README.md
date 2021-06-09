@@ -1,8 +1,13 @@
 * 彩虹流光-btn
 
-![chbtn](https://github.com/ma1833577561/web-development-notebook/new/master/CSS/images/lgchbtn.gif)
+![lgchbtn.gif](https://github.com/ma1833577561/web-development-notebook/blob/master/CSS/images/lgchbtn.gif)
+
+
 ```
-.btn {
+ <a href="#" class="lgch-btn">button</a>
+```
+```
+.lgch-btn {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,7 +39,7 @@
     }
   }
 
-  .btn::before {
+  .lgch-btn::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -49,7 +54,7 @@
     transition: 0.5s;
   }
 
-  .btn:hover::before {
+  .lgch-btn:hover::before {
     filter: blur(20px);
     opacity: 1;
     animation: animate 8s linear infinite;
