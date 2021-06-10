@@ -1,5 +1,10 @@
-### 常用方法
+### 常用技能
+· JavaScript 的数据类型包括原始类型和对象类型：
 
+ 原始类型：Null、Undefined、Number、String、Boolean、Symbol、BigInt
+ 对象类型：Object
+
+`判断数据类型`
 ```
 // 检测数据类型
 const getType = function(obj) {
@@ -14,6 +19,30 @@ const getType = function(obj) {
 // 检测数据类型
 var obj='1'
 Object.prototype.toString.call(obj).slice(8, -1).toLowerCase()
+```
+
+```
+//用 instanceof 检测原始类型
+class PrimitiveNumber {
+  static [Symbol.hasInstance] = x  => typeof x === 'number';
+}
+//number可以是string、number、boolean、symbol、null、undefined
+// instanceof 不能检测原始类型，但是Symbol.hasInstance 允许我们自定义 instanceof 的行为让其用于检测原始类型。
+```
+`自己造一个instanceo`
+```
+const privateInstanceof = function(left, right) {
+    if (typeof left !== 'object' || left === null) return false
+    // 静态方法 Reflect.getPrototypeOf()与Object.getPrototypeOf()方法是一样的。都是返回指定对象的原型（即，内部的 [[Prototype]]属性的值）。
+    let proto = Reflect.getPrototypeOf(left)
+    while (true) {
+        if (proto === null) return false
+        if (proto === right.prototype) return true
+        proto = Reflect.getPrototypeOf(proto)
+    }
+}
+
+
 ```
 ### 开发常见的问题
 
