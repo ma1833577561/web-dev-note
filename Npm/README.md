@@ -4,10 +4,12 @@
 ```
 npm install vue-i18n
 ```
-`创建i18n文件夹`
- ![创建i18n文件夹]()
-`创建翻译的文本对象`
- ![创建翻译的文本对象]()
+* `创建i18n文件夹`
+
+ ![创建i18n文件夹](https://github.com/ma1833577561/web-development-notebook/blob/master/Npm/images/i18nFile.webp)
+ ***
+* `创建翻译的文本对象`
+ ![创建翻译的文本对象](https://github.com/ma1833577561/web-development-notebook/blob/master/Npm/images/fileObject.png)
 `在index文件中引入国际化配置文件（也可以直接挂载到下一步）`
 ```
 import en from './en'
