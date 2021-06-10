@@ -1,3 +1,20 @@
+### 常用方法
+
+```
+// 检测数据类型
+const getType = function(obj) {
+    let type = typeof obj
+    if (type !== 'object') {
+        return type
+    }
+    return Object.prototype.toString.call(obj).replace(/^\[object (\S+)\]$/, '$1').toLowerCase()
+}
+```
+```
+// 检测数据类型
+var obj='1'
+Object.prototype.toString.call(obj).slice(8, -1).toLowerCase()
+```
 ### 开发常见的问题
 
 
