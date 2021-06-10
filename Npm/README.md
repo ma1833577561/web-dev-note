@@ -1,16 +1,19 @@
 ### i18n国际化配置
 
-`安装i18n`
+* `安装i18n`
 ```
 npm install vue-i18n
 ```
+
 * `创建i18n文件夹`
 
  ![创建i18n文件夹](https://github.com/ma1833577561/web-development-notebook/blob/master/Npm/images/i18nFile.webp)
  ***
+ 
 * `创建翻译的文本对象`
  ![创建翻译的文本对象](https://github.com/ma1833577561/web-development-notebook/blob/master/Npm/images/fileObject.png)
-`在index文件中引入国际化配置文件（也可以直接挂载到下一步）`
+
+* `在index文件中引入国际化配置文件（也可以直接挂载到下一步）`
 ```
 import en from './en'
 import cn from './zh-cn'
@@ -34,7 +37,7 @@ export default {
   }
 }
 ```
-`在i18n.js中配置`
+* `在i18n.js中配置`
 ```
 // 引入插件和语言包
 import Vue from 'vue'
@@ -54,7 +57,7 @@ const i18n = new VueI18n({//实例化vue-i18n
 export default i18n
 ```
 
-`在main.js中引入`
+* `在main.js中引入`
 ```
 import i18n from './i18n/i18n'
 // element ui
@@ -76,11 +79,11 @@ var vue =  new Vue({
 })
 export default vue
 ```
-`在页面中使用`
+* `在页面中使用`
 ```
 <h3>{{$t('message.usersLogin')}}</h3>
 ```
-`切换语言`
+* `切换语言`
 ```
 <!-- 语言选择框 -->
    <template>
