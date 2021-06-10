@@ -1,8 +1,8 @@
 ### 常用技能
 · JavaScript 的数据类型包括原始类型和对象类型：
 
- 原始类型：Null、Undefined、Number、String、Boolean、Symbol、BigInt
- 对象类型：Object
+ * 原始类型：Null、Undefined、Number、String、Boolean、Symbol、BigInt
+ * 对象类型：Object
 
 `判断数据类型`
 ```
