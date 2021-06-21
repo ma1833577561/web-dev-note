@@ -9,7 +9,7 @@
 
 [CSS3奇思妙想，单标签实现各类图形](https://github.com/chokcoco/magicCss)
 
-[jQuery源码解析](https://github.com/chokcoco/jQuery-)
+
 
  
 
