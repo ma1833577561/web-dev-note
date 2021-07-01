@@ -10,7 +10,7 @@
 <vxe-table-column field="date13" :edit-render="{name: '$input', autoselect: true}"></vxe-table-column>
 ```
 
-2. * 表格合计
+2. * 表格合计[footer-method]
 
 ![表格合计](https://github.com/ma1833577561/web-development-notebook/blob/master/Vue/vxe-table/images/table-sum-column.gif)
 ```
