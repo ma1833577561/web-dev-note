@@ -1,10 +1,10 @@
 ### vxe-table 使用指南
 
-1.  * 表格选中
+1.  * 表格选中[autoselect: true]
 
 ![选中](https://github.com/ma1833577561/web-development-notebook/blob/master/Vue/vxe-table/images/vxe-table-select.gif)
 
-autoselect: true
+
 
 ```
 <vxe-table-column field="date13" :edit-render="{name: '$input', autoselect: true}"></vxe-table-column>
