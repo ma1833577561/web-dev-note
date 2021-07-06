@@ -14,4 +14,9 @@
 本篇幅推荐说的是Quill的扩展组件`vue-quill-editor`
 * vue-quill-editor
 
+
+[vue-quill-editor](https://github.com/ma1833577561/vue-quill-editor)
+
+
 [demo Page](https://github.surmon.me/vue-quill-editor/)
+
