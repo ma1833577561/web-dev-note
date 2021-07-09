@@ -189,3 +189,51 @@ export default {
   3.val采用上级或者本级之间特有的共性来进行处理会方便许多
 ```
 
+
+
+* 级联懒加载回显问题
+ - 数据回显不上去、绑定不上
+```
+ <el-cascader
+      ref='cascader'
+      class="cascader"
+      style="width: 300px;"
+      v-model="ruleForm.detailAddress"
+     :props="sendeAddressProps"
+     :placeholder="placeholderCascader"
+    @change="addressChange"
+ />
+ data....
+  placeholderCascader:'请选择寄/收件地区'
+  
+ metheds...
+  回显方法
+  result....
+  this.placeholderCascader=result.province+'/'+result.city+'/'+result.county
+
+ ....
+ 
+ input::-webkit-input-placeholder {
+      color:#717171 !important;
+    }
+    input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color:#717171 !important;
+    }
+    input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color:#717171 !important;
+    }
+    input:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color:#717171 !important;
+    }
+</el-cascader>
+
+
+
+```
+
+[element issues](https://github.com/ElemeFE/element/pull/15611)
+[cascader懒加载不回显,输入框无显示](https://github.com/ElemeFE/element/pull/15611)
+
