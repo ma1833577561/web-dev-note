@@ -25,3 +25,6 @@
   1). 内置对象 array、number、string、object、boolean
   2). 数据类型 null、number、string、undefined、boolean
 
+4.如何实现跨域访问
+ 1). php请求头header{"Access-Control-Allow-Origin:* ”}
+ 2). jsonp  url+callbackFn
