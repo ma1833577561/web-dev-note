@@ -44,3 +44,23 @@
 ```
   1). angular对常用的dom、xhr事件进行了封装在里面触发进入angular的digest流程，在该流程中。会从rootscope开始遍历，检查所有的watcher.
 ```
+7. 阻止冒泡、默认事件
+```
+  1). 阻止冒泡 e.stopPropagation()
+    stopBubble(e){
+      if(e&&e.stopPropagation){ // 非IE
+        e.stopPropagation()
+      }else{// IE
+        window.event.cancelBubble= true
+      }
+    }
+  2). 阻止默认事件 e.preventDefault()
+    stopDefault(e){
+      if(e&&e.preventDefault){
+        e.preventDefault()
+      }else{
+        window.event.returnValue = false
+        return false
+      }
+    }
+```
