@@ -3,10 +3,10 @@
 
 
 1. 前端性能优化
-
+```
   1). 使用css Sprites（精灵图）通过background-image、background-repeat、background-position的组合进行背景定位。
   2). 压缩文件、CDN托管、图片懒加载、
-  
+ ``` 
 
 
 2. 水平垂直布局
@@ -54,6 +54,7 @@
         window.event.cancelBubble= true
       }
     }
+    
   2). 阻止默认事件 e.preventDefault()
     stopDefault(e){
       if(e&&e.preventDefault){
