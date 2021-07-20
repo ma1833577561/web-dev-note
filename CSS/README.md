@@ -74,6 +74,12 @@ display-none: 元素不存在，从 dom 中删除
 opacity-0: 元素透明度将为 0，但元素仍然存在，绑定的事件仍旧有效仍可触发执行。
 visibility-hidden：元素隐藏，但元素仍旧存在，页面中无法触发该元素的事件。
 ```
+### 3、特殊的样式
+```
+// chrome中文界面下默认将小于12px的文本强制按照12px显示
+// 加入-webkit-text-size-adjust可以解决
+-webkit-text-size-adjust:none
+```
 
 
 
