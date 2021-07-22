@@ -66,7 +66,9 @@
   toBe：括号中是你设定的输出结果，如果toBe括号中结果与程序执行结果不一致会报错，
   
  ![一致](https://github.com/ma1833577561/web-development-notebook/blob/master/images/web_test/1.png)
- 只有程序输出结果与设定结果一致才会返回成功
+ 
+ 
+ * 只有程序输出结果与设定结果一致才会返回成功
  
  ![success](https://github.com/ma1833577561/web-development-notebook/blob/master/images/web_test/success.png)
  
