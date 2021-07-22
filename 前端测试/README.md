@@ -108,8 +108,7 @@
  
  * `扩展`
 ```
-输入 npx jest --init 按回车键
-在jest.config.js文件中含有
+输入 npx jest --init 按回车键，在jest.config.js文件中含有
 coverageDirectory : "coverage"   //打开测试覆盖率选项
 
 
@@ -134,7 +133,7 @@ coverageDirectory : "coverage"   //打开测试覆盖率选项
   }
 
 ```
-* 就会看到 
+* 就会看到 与输入  npx jest --coverage 回车键一样的效果啦
 
 ![result](https://github.com/ma1833577561/web-development-notebook/blob/master/images/web_test/npmRunCoverage.png)
 
