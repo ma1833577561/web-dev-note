@@ -101,6 +101,8 @@
 ```
 * 就会看到 
 
+![result](https://github.com/ma1833577561/web-development-notebook/blob/master/images/web_test/json.png)
+
 ![result](https://github.com/ma1833577561/web-development-notebook/blob/master/images/web_test/jestTest.png)
 
  
