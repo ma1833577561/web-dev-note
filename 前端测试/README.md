@@ -59,7 +59,7 @@
   expect：是调用demo.js中自定义的方法
   toBe：括号中是你设定的输出结果，如果toBe括号中结果与程序执行结果不一致会报错，只有程序输出结果与设定结果一致才会返回成功
  ```
- [test](https://github.com/ma1833577561/web-development-notebook/tree/master/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95/images/)
+ [test](https://github.com/ma1833577561/web-development-notebook/blob/master/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95/images/%E6%B5%8B%E8%AF%95%E5%87%BD%E6%95%B0%E5%BF%85%E9%A1%BB%E6%98%AFtest.png)
  [一致](https://github.com/ma1833577561/web-development-notebook/tree/master/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95/images/)
  [success](https://github.com/ma1833577561/web-development-notebook/tree/master/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95/images/)
  
