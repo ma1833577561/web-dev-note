@@ -186,6 +186,9 @@ merge_requests // 合并分支
    # 推送远程
    $ git push 
 
+   # 拉取远程
+   $ git pull
+
    # 切换分支
    $ git checkout 分支名称 
 
