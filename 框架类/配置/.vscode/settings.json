@@ -1,0 +1,19 @@
+{
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "vue",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "editor.tabSize": 2,
+    "stylelint.autoFix": true,
+    "files.exclude": {
+      "**/node_modules": true
+    }
+  }
