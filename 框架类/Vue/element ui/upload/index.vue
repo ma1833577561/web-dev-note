@@ -49,7 +49,7 @@
             return {
                 visible: false,
                 loadding: false,
-                upload_url: '/web/main/ucLive/list/upload',
+                upload_url: '/web/list/upload',
                 headers: { 'UC-CSRF-TOKEN': Cookie.get('UC-CSRF-TOKEN') }
             };
         },
