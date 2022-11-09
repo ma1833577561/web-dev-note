@@ -1,32 +1,48 @@
-## use
+# upload上传组件
 
-* xxx.vue
+
+* use
+
 ```vue
+
 <template>
-<div>
-<el-buttton @click="open">上传</el-button>
- <uploadComponent :config="uploadParams" ref="upload"> </uploadComponent>
-</div>
+    <div class="goods">
+        <el-button size="small" type="primary" @click="onBatchAdd"> 批量操作 </el-button>
+        <UploadFileDialog ref="uploadGoodRef" :config="config" @confirm="onConfirmDialog" />
+    </div>
 </template>
 <script>
-  import uploadComponent from '@/components/upload';
-  
-  export default {
-    components: {
-        uploadComponent
-    },
-    computed: {
-        uploadParams() {
-            const params = { url: 'www.baidu.com', type: 'png,jpg', isShop:true}
-            return params;
-        },
-    },
-    methods: {
-          open(){
-            this.$refs.upload.show()
-          }
-    }
-  }
+    import UploadFileDialog from '@/components/UploadFileDialog';
 
+    export default {
+        components: {
+            UploadFileDialog,
+        },
+        data() {
+            return {
+                list: [],
+            };
+        },
+        created() {
+            this.getList();
+        },
+        methods: {
+            async getList() {
+              // code
+            },
+            onBatchAdd() {
+                this.$refs.uploadGoodRef.show();
+            },
+            onConfirmDialog() {
+                this.getList();
+            },
+        }
+    };
 </script>
+<style lang="scss" scoped>
+    .goods {
+        margin: 20px 0;
+    }
+</style>
+
 ```
