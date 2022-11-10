@@ -1,0 +1,37 @@
+.pagination {
+    margin: 20px auto 10px;
+    text-align: right;
+  }
+  
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .categoryItem {
+    position: relative;
+    height: 20px;
+    margin-bottom: 12px;
+    padding-left: 15px;
+    color: #999;
+    font-size: 13px;
+    line-height: 20px;
+  
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background: #999;
+      border-radius: 1.5px;
+      transform: translateY(-50%);
+      content: "";
+    }
+  
+    .time {
+      float: right;
+      font-size: 12px;
+      letter-spacing: -.09px;
+    }
+  }
