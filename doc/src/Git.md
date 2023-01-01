@@ -139,6 +139,13 @@ merge_requests // 合并分支
    $ git push -u origin main 
    $ 
 
+   # 移除关联远程仓库
+   $ git remote rm origin
+   # 关联远程仓库
+   $ git remote add origin git@github.com:ma1833577561/react-cli.git
+   $ git branch -M main
+   $ git push -u origin main
+
 ```
 
 ## 2、使用
