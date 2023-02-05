@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>文字转语音/语音转文字</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .voice {
+        padding: 50px;
+        display: flex;
+      }
+      .voiceToTxt,
+      .txtToVoice{
+        padding: 4px;
+        flex: 1;
+        text-align: center;
+      }
+      .voiceToTxt{
+        border-right: 1px dashed #a9aa78;
+        
+      }
+      .txtToVoice{
+        border-left: 1px dashed #a9aa78;
+        
+      }
+      
+      .voiceToTxt p {
+          display: flex;
+          padding: 5px;
+          align-items: center;
+          font-size: 16px;
+      }
+      .voiceToTxt span {
+        width: 100px;
+      }
+      
+      .voiceToTxt input {
+        width: 220px;
+        border:1px solid #999b9f;
+        padding: 5px 8px;
+      } 
+      
+      .voiceToTxt button {
+        font-size: 16px;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: red;
+        border:1px solid #fff;
+      }
+      
+      .txtToVoice button {
+        font-size: 16px;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: red;
+        border:1px solid #fff;
+      }
+      
+      .txtToVoice button:nth-child(2) {
+        color: red;
+        background-color: #fff;
+        border:1px solid red;
+      }
+      
+      .txtToVoice .content {
+        margin: 5px;
+        font-size: 14px;
+        color: #999b9f;
+      }
+      
+    </style>
+ </head>
+ <body>
+  <div class="voice">
+      <div class="voiceToTxt">
+        <p><span>文字：</span><input class="input" type="text" placeholder="请输入内容"></p >
+        <p><span>语音音调：</span><input class="voice" type="number" min="0" placeholder="请输入内容"></p >
+         <p><button class="submit">确定</button></p >
+      </div> 
+      <div class="txtToVoice">
+        <p><button class="startSubmit">开始识别</button>
+        <button class="endSubmit">结束识别</button></p >
+        <p class="content"> 请点击开始识别按钮 </p >
+      </div> 
+  </div>
+  <script type="text/javascript">
+      window.onload = (function () {
+        const getEl = el => document.querySelector(el)
+        const txToVoiceEl = () => ({
+            inputEl: getEl('.input'),
+            submitEl: getEl('.submit'),
+            voiceEl: getEl('.voice'),
+          })
+          
+  
+        // 文字转语音
+        const txtToVoiceFn = () => {
+          let voices=[]
+          const { inputEl, submitEl, voiceEl } = txToVoiceEl()
+          // 浏览器自带语音包
+          speechSynthesis.onvoiceschanged = function (){
+            voices = speechSynthesis.getVoices().filter(i=>i.lang.includes("zh"))
+          }
+          
+          submitEl.addEventListener('click',function() {
+            if(inputEl.value===' ' && voiceEl.value ===''){
+              return false
+            }
+            
+            let sayer = new SpeechSynthesisUtterance(inputEl.value);
+            sayer.voice = voices[voiceEl.value||0]
+            speechSynthesis.speak(sayer)
+          })
+          
+        }
+        
+        const voiceToTxtEl = () => ({
+          startEl: getEl('.startSubmit'),
+          endEl: getEl('.endSubmit'),
+          contentEl: getEl('.content'),
+        })
+        
+        // 语音转文字
+        const voiceToTxtFn = () => {
+          const { startEl, endEl, contentEl } = voiceToTxtEl()
+          var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+          var Speech = new SpeechRecognition()
+          Speech.onresult = function(e){
+            contentEl.innerText = `语音结果: ${e.results[0][0].transcript} `
+            console.log(`语音结果: ${e.results[0][0].transcript} `)
+          }
+          
+          startEl.addEventListener('click', function(){
+            console.log('start----')
+            Speech.start()
+          })
+          
+          endEl.addEventListener('click',function() {
+            console.log('end----')
+            Speech.stop()
+          })
+        }
+        txtToVoiceFn()
+        voiceToTxtFn()
+      });
+  </script>
+ </body>
+</html>
